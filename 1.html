@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My First Blog Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Raleway", sans-serif;
+      background-color: #1c1e21;
+      color: #f1f1f1;
+    }
+    .card {
+      background-color: #2c2f33;
+    }
+    .card a {
+      color: #81a2ff;
+      text-decoration: none;
+    }
+    .badge-custom {
+      background-color: #444;
+      color: #fff;
+      margin: 2px;
+    }
+    .tag {
+      background-color: #000;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+
+  <!-- Header -->
+  <header class="text-center mb-5">
+    <h1><b>MY BLOG</b></h1>
+    <p>Welcome to the blog of <span class="tag">unknown</span></p>
+  </header>
+
+  <div class="row">
+    <!-- Blog entries -->
+    <div class="col-lg-8">
+      <!-- Blog post 1 -->
+      <div class="card text-white mb-4 shadow">
+        <img src="image/woods.jpg" class="card-img-top" alt="Nature">
+        <div class="card-body">
+          <h4 class="card-title"><b>HELL YEAH</b></h4>
+          <h6 class="card-subtitle mb-2 text-light">Title description, April 7, 2014</h6>
+          <p class="card-text">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat...</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-outline-light btn-sm"><b>READ MORE »</b></button>
+            <span><b>Comments</b> <i class="bi bi-chat-left-text"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog post 2 -->
+      <div class="card text-white mb-4 shadow">
+        <img src="image/bridge.jpg" class="card-img-top" alt="Bridge">
+        <div class="card-body">
+          <h4 class="card-title"><b>BLOG ENTRY</b></h4>
+          <h6 class="card-subtitle mb-2 text-light">Title description, April 2, 2014</h6>
+          <p class="card-text">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat...</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-outline-light btn-sm"><b>READ MORE »</b></button>
+            <span><b>Comments</b> <i class="bi bi-chat-left-text"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <!-- About -->
+      <div class="card mb-4 text-white shadow">
+        <img src="image/avatar_g.jpg" class="card-img-top" alt="Avatar">
+        <div class="card-body">
+          <h4 class="card-title"><b>My Name</b></h4>
+          <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+        </div>
+      </div>
+
+      <!-- Popular posts -->
+      <div class="card mb-4 shadow">
+        <div class="card-header text-white">
+          <h4 class="mb-0">Popular Posts</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-dark text-white d-flex">
+            <img src="image/workshop.jpg" class="me-3" style="width:50px;" alt="Post">
+            <div>
+              <div class="fw-bold">Lorem</div>
+              <small>Sed mattis nunc</small>
+            </div>
+          </li>
+          <li class="list-group-item bg-dark text-white d-flex">
+            <img src="image/gondol.jpg" class="me-3" style="width:50px;" alt="Post">
+            <div>
+              <div class="fw-bold">Ipsum</div>
+              <small>Praes tinc sed</small>
+            </div>
+          </li>
+          <li class="list-group-item bg-dark text-white d-flex">
+            <img src="image/skies.jpg" class="me-3" style="width:50px;" alt="Post">
+            <div>
+              <div class="fw-bold">Dorum</div>
+              <small>Ultricies congue</small>
+            </div>
+          </li>
+          <li class="list-group-item bg-dark text-white d-flex">
+            <img src="image/rock.jpg" class="me-3" style="width:50px;" alt="Post">
+            <div>
+              <div class="fw-bold">Mingsum</div>
+              <small>Lorem ipsum dipsum</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tags -->
+      <div class="card mb-4 text-white shadow">
+        <div class="card-header">
+          <h4>Tags</h4>
+        </div>
+        <div class="card-body">
+          <span class="badge badge-custom">Travel</span>
+          <span class="badge badge-custom">New York</span>
+          <span class="badge badge-custom">London</span>
+          <span class="badge badge-custom">IKEA</span>
+          <span class="badge badge-custom">NORWAY</span>
+          <span class="badge badge-custom">DIY</span>
+          <span class="badge badge-custom">Ideas</span>
+          <span class="badge badge-custom">Baby</span>
+          <span class="badge badge-custom">Family</span>
+          <span class="badge badge-custom">News</span>
+          <span class="badge badge-custom">Clothing</span>
+          <span class="badge badge-custom">Shopping</span>
+          <span class="badge badge-custom">Sports</span>
+          <span class="badge badge-custom">Games</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white p-4 mt-5 text-start">
+    <button class="btn btn-secondary me-2" disabled>Previous</button>
+    <button class="btn btn-light">Next »</button>
+    <p class="mt-3">Powered by <a href="https://getbootstrap.com/" class="text-white" target="_blank">Bootstrap</a></p>
+  </footer>  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
