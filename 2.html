@@ -35,7 +35,30 @@
       color: white;
       margin: 0 10px;
       font-size: 1.5rem;
+      
     }
+    /* Định vị nút bấm carousel */
+    #portfolioCarousel .carousel-control-prev,
+        #portfolioCarousel .carousel-control-next {
+            width: 5%; /* Giảm độ rộng để không che ảnh */
+        }
+        #portfolioCarousel .carousel-control-prev {
+            left: 0;
+        }
+        #portfolioCarousel .carousel-control-next {
+            right: 0;
+        }
+        /* Tăng z-index cho nút bấm để đảm bảo có thể click */
+        #portfolioCarousel .carousel-control-prev,
+        #portfolioCarousel .carousel-control-next {
+            z-index: 10;
+        }
+        /* Căn giữa nút xem chi tiết */
+        #portfolioCarousel .carousel-item .col-md-4 .btn-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Thêm khoảng cách phía trên nút */
+        }    
   </style>
 </head>
 <body>
@@ -168,20 +191,95 @@
 
 <!-- Portfolio Section -->
 <section id="portfolio" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Dự Án Nổi Bật</h2>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <img src="image/dự án 1.jpg" class="img-fluid rounded shadow" alt="Project 1">
-      </div>
-      <div class="col-md-4 mb-4">
-        <img src="image/dự án 2.jpg" class="img-fluid rounded shadow" alt="Project 2">
-      </div>
-      <div class="col-md-4 mb-4">
-        <img src="image/dự án 3.jpg" class="img-fluid rounded shadow" alt="Project 3">
-      </div>
+    <div class="container">
+        <h2 class="text-center mb-4">Dự Án Nổi Bật</h2>
+        <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <img src="image/dự án 1.jpg" class="d-block w-100 rounded shadow" alt="Project 1" style="max-height: 250px; object-fit: cover;">
+                            <div class="btn-wrapper">
+                                <a class="btn btn-outline-info btn-sm mt-2" data-bs-toggle="collapse" href="#project1Detail" role="button" aria-expanded="false" aria-controls="project1Detail">Xem chi tiết</a>
+                            </div>
+                            <div class="collapse mt-2" id="project1Detail">
+                                <div class="card card-body">
+                                    Mô tả chi tiết dự án 1.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="image/dự án 2.jpg" class="d-block w-100 rounded shadow" alt="Project 2" style="max-height: 250px; object-fit: cover;">
+                            <div class="btn-wrapper">
+                                <a class="btn btn-outline-info btn-sm mt-2" data-bs-toggle="collapse" href="#project2Detail" role="button" aria-expanded="false" aria-controls="project2Detail">Xem chi tiết</a>
+                            </div>
+                            <div class="collapse mt-2" id="project2Detail">
+                                <div class="card card-body">
+                                    Mô tả chi tiết dự án 2.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="image/dự án 3.jpg" class="d-block w-100 rounded shadow" alt="Project 3" style="max-height: 250px; object-fit: cover;">
+                            <div class="btn-wrapper">
+                                <a class="btn btn-outline-info btn-sm mt-2" data-bs-toggle="collapse" href="#project3Detail" role="button" aria-expanded="false" aria-controls="project3Detail">Xem chi tiết</a>
+                            </div>
+                            <div class="collapse mt-2" id="project3Detail">
+                                <div class="card card-body">
+                                    Mô tả chi tiết dự án 3.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <img src="image/dự án 4.jpg" class="d-block w-100 rounded shadow" alt="Project 4" style="max-height: 250px; object-fit: cover;">
+                            <div class="btn-wrapper">
+                                <a class="btn btn-outline-info btn-sm mt-2" data-bs-toggle="collapse" href="#project4Detail" role="button" aria-expanded="false" aria-controls="project4Detail">Xem chi tiết</a>
+                            </div>
+                            <div class="collapse mt-2" id="project4Detail">
+                                <div class="card card-body">
+                                    Mô tả chi tiết dự án 4.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="image/dự án 5.jpg" class="d-block w-100 rounded shadow" alt="Project 5" style="max-height: 250px; object-fit: cover;">
+                            <div class="btn-wrapper">
+                                <a class="btn btn-outline-info btn-sm mt-2" data-bs-toggle="collapse" href="#project5Detail" role="button" aria-expanded="false" aria-controls="project5Detail">Xem chi tiết</a>
+                            </div>
+                            <div class="collapse mt-2" id="project5Detail">
+                                <div class="card card-body">
+                                    Mô tả chi tiết dự án 5.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <img src="image/dự án 6.jpg" class="d-block w-100 rounded shadow" alt="Project 6" style="max-height: 250px; object-fit: cover;">
+                            <div class="btn-wrapper">
+                                <a class="btn btn-outline-info btn-sm mt-2" data-bs-toggle="collapse" href="#project6Detail" role="button" aria-expanded="false" aria-controls="project6Detail">Xem chi tiết</a>
+                            </div>
+                            <div class="collapse mt-2" id="project6Detail">
+                                <div class="card card-body">
+                                    Mô tả chi tiết dự án 6.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
-  </div>
 </section>
 
 <!--Achievements Section-->
