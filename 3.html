@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    }
+    .sidebar {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      background-color: #343a40;
+      padding-top: 1rem;
+      overflow-y: auto;
+      color: white;
+    }
+    .sidebar .nav-link {
+      color: white;
+    }
+    .sidebar .nav-link:hover {
+      background-color: #495057;
+      color: #ffc107;
+    }
+    .content {
+      margin-left: 250px;
+      background-color: #ffffff;
+    }
+    .overlay-text {
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      color: white;
+    }
+    .overlay-text h1 {
+      font-weight: bold;
+    }
+    .card .w3-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: black;
+      color: white;
+      padding: 3px 8px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="sidebar d-flex flex-column">
+  <h3 class="text-center fw-bold">LOGO</h3>
+  <div class="nav flex-column">
+    <a href="#shirts" class="nav-link">Shirts</a>
+    <a href="#dresses" class="nav-link">Dresses</a>
+    <a class="nav-link" data-bs-toggle="collapse" href="#collapseJeans" role="button" aria-expanded="false" aria-controls="collapseJeans">
+      Jeans <i class="fa fa-caret-down"></i>
+    </a>
+    <div class="collapse ps-3" id="collapseJeans">
+      <a href="#jeans" class="nav-link">Skinny</a>
+      <a href="#jeans" class="nav-link">Relaxed</a>
+      <a href="#jeans" class="nav-link">Bootcut</a>
+      <a href="#jeans" class="nav-link">Straight</a>
+    </div>
+    <a href="#jackets" class="nav-link">Jackets</a>
+    <a href="#gymwear" class="nav-link">Gymwear</a>
+    <a href="#blazers" class="nav-link">Blazers</a>
+    <a href="#shoes" class="nav-link">Shoes</a>
+    <a href="#footer" class="nav-link">Contact</a>
+    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#newsletterModal">Newsletter</a>
+    <a href="#footer" class="nav-link">Subscribe</a>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="content">
+  <header class="d-flex justify-content-between align-items-center p-3 border-bottom">
+    <h1 class="fs-3">New Arrivals</h1>
+    <div>
+      <i class="fa fa-shopping-cart me-3"></i>
+      <i class="fa fa-search"></i>
+    </div>
+  </header>
+
+  <div class="position-relative">
+    <img src="https://www.w3schools.com/w3images/jeans.jpg" class="img-fluid w-100" alt="Jeans">
+    <div class="overlay-text">
+      <h1 class="display-5">New arrivals</h1>
+      <h1 class="h4">COLLECTION 2025</h1>
+      <a href="#jeans" class="btn btn-warning btn-lg mt-3">SHOP NOW</a>
+    </div>
+  </div>
+
+  <div class="container my-5">
+     <!-- Sections for each category -->
+     <div id="shirts" class="mb-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Shirt 1')">
+            <img src="image/shirt 1.webp" class="card-img-top" alt="Shirt 1">
+            <div class="card-body">
+              <p class="card-text">Shirt 1<br><strong>$12.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Shirt 2')">
+            <img src="image/shirt 2.jpg" class="card-img-top" alt="Shirt 2">
+            <div class="card-body">
+              <p class="card-text">Shirt 2<br><strong>$14.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Shirt 3')">
+            <img src="image/shirt 3.webp" class="card-img-top" alt="Shirt 3">
+            <div class="card-body">
+              <p class="card-text">Shirt 3<br><strong>$11.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Shirt 4')">
+            <img src="image/shirt 4.avif" class="card-img-top" alt="Shirt 4">
+            <div class="card-body">
+              <p class="card-text">Shirt 4<br><strong>$13.99</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dresses" class="mb-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Dress 1')">
+            <img src="image/dress 1.webp" class="card-img-top" alt="Dress 1">
+            <div class="card-body">
+              <p class="card-text">Dress 1<br><strong>$24.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Dress 2')">
+            <img src="image/dress 2.webp" class="card-img-top" alt="Dress 2">
+            <div class="card-body">
+              <p class="card-text">Dress 2<br><strong>$22.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Dress 3')">
+            <img src="image/dress 3.jpg" class="card-img-top" alt="Dress 3">
+            <div class="card-body">
+              <p class="card-text">Dress 3<br><strong>$20.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Dress 4')">
+            <img src="image/dress 4.webp" class="card-img-top" alt="Dress 4">
+            <div class="card-body">
+              <p class="card-text">Dress 4<br><strong>$18.99</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="jackets" class="mb-5">
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Jacket 1')">
+            <img src="image/jacket 1.avif" class="card-img-top" alt="Jacket 1">
+            <div class="card-body">
+              <p class="card-text">Jacket 1<br><strong>$34.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Jacket 2')">
+            <img src="image/jacket 2.webp" class="card-img-top" alt="Jacket 2">
+            <div class="card-body">
+              <p class="card-text">Jacket 2<br><strong>$36.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Jacket 3')">
+            <img src="image/jacket 3.webp" class="card-img-top" alt="Jacket 3">
+            <div class="card-body">
+              <p class="card-text">Jacket 3<br><strong>$31.99</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="alert('Bạn đã chọn Jacket 4')">
+            <img src="image/jacket 4.avif" class="card-img-top" alt="Jacket 4">
+            <div class="card-body">
+              <p class="card-text">Jacket 4<br><strong>$39.99</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    
+    
+  <!-- Subscribe section -->
+  <div class="bg-dark text-white text-center p-5">
+    <h2>Subscribe</h2>
+    <p>To get special offers and VIP treatment:</p>
+    <div class="container">
+      <input type="email" class="form-control mb-2" placeholder="Enter e-mail">
+      <button class="btn btn-warning">Subscribe</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-dark p-5" id="footer">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <form>
+          <input type="text" class="form-control mb-2" placeholder="Name" required>
+          <input type="email" class="form-control mb-2" placeholder="Email" required>
+          <input type="text" class="form-control mb-2" placeholder="Subject" required>
+          <textarea class="form-control mb-2" placeholder="Message" required></textarea>
+          <button class="btn btn-dark w-100">Send</button>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <h5>About</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">We're hiring</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Find store</a></li>
+          <li><a href="#">Shipment</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#">Gift card</a></li>
+          <li><a href="#">Return</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Store</h5>
+        <p><i class="fa fa-map-marker-alt"></i> Company Name</p>
+        <p><i class="fa fa-phone"></i> 0044123123</p>
+        <p><i class="fa fa-envelope"></i> ex@mail.com</p>
+        <h6>We accept</h6>
+        <p><i class="fa fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-credit-card"></i> Credit Card</p>
+        <div class="mt-3">
+          <i class="fab fa-facebook fa-lg me-2"></i>
+          <i class="fab fa-instagram fa-lg me-2"></i>
+          <i class="fab fa-snapchat fa-lg me-2"></i>
+          <i class="fab fa-pinterest fa-lg me-2"></i>
+          <i class="fab fa-twitter fa-lg me-2"></i>
+          <i class="fab fa-linkedin fa-lg"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="text-center bg-dark text-white py-2">Powered by Bootstrap</div>
+</div>
+
+<!-- Newsletter Modal -->
+<div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newsletterModalLabel">NEWSLETTER</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+        <input type="email" class="form-control mb-3" placeholder="Enter e-mail">
+        <button class="btn btn-danger w-100" data-bs-dismiss="modal">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
